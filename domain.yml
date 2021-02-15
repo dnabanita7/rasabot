@@ -1,0 +1,104 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - enquire
+  - navigate
+  - inform
+
+entities:
+  - company_name
+  - product
+  - price
+  - recommender
+  - name
+  - email
+  - sales_ticket
+
+slots:
+  company_name:
+    type: text
+    influence_conversation: false
+
+  product:
+    type: list
+    influence_conversation: true
+    
+  price:
+    type: categorical
+    values:
+    - low
+    - medium
+    - high
+    influence_conversation: true
+
+  recommender:
+    type: text
+    influence_conversation: true
+
+  name:
+    type: text
+    influence_conversation: false
+
+  email:
+    type: text
+    influence_conversation: false
+
+  sales_ticket:
+    type: text
+    influence_conversation: true
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_inform:
+  - text: "Who are you?"
+  - text: "May I know your email-address?"
+  - text: "What's your name?"
+  - text: "Can I know your name, please?"
+  - text: "Please share your email address."
+
+  utter_navigate:
+  - text: "Are you new here?"
+  - text: "Let me show you around."
+  - text: "To find the perfect {product} I need your {price} level."
+  - text: "We have 3 products, i.e. Medicines, Garage Parts, Paint."
+  - text: "Shall I create a ticket for you?"
+  - text: "Let me create a sales ticket on your behalf."
+
+  utter_enquire:
+  - text: "Medicines cost around 200 dollars."
+  - text: "Garage Parts cost about 150 dollars."
+  - text: "This paint costs 100 dollars."
+  - text: "Our products are out of the world."
+  - text: "Let's go our search bar to find the products you need."
+  - text: "Did you check this?"
+  - text: "Are you happy with our service?"
+  - text: "X is a multi-national company selling products online and offline worldwide."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
