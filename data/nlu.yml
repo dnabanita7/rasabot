@@ -1,0 +1,148 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: enquire
+  examples: |
+    - What's [X](company_name)?
+    - What is so different about [X](company_name)?
+    - What does [X](company_name) do?
+    - What's [X]'s(company_name) ratings in globally?
+    - What can [X](company_name) do?
+    - Tell me about [X](company_name)
+    - Tell me about your [company](company_name)
+    - What's [X]'s(company_name) [products](product)?
+    - What is so different about [X]'s(company_name) [products](product)?
+    - What does [X](company_name) support in?
+    - What [X]'s(company_name) [products](product) are offered globally?
+    - What does [X](company_name) offer?
+    - Tell me about [X]'s(company_name) [products](product)
+    - Tell me about your [company]'s(company_name) [products](product)?
+    - What's the [price range](price) of [medicines](product)?
+    - What's the [price range](price) of [garage parts](product)?
+    - What's the [price range](price) of [paint](product)?
+    - Show me the [prices](price) of [medicines](product)
+    - Show me the [prices](price) of [garage parts](product)
+    - Show me the [prices](price) of [paint](product)
+    - What's the [cost](price) of the [paracetamol](product)?
+    - What is so different about [garage parts](product) sold by [X](company_name)?
+    - How much does this [garage part](product) [costs](price)?
+    - What's the [rate](price) of [paint](product) bought from [X](company_name)?
+    - How much does [paint](product) [costs](price)?
+    - How much does [medicines](product) [cost](price)?
+    - How much does [garage parts](product) [cost](price)?
+    - Tell me about [medicines'](product) [price](price)
+    - Tell me about your [medicines'](product) [price](price)?
+    - Tell me about [garage parts'](product) [price](price)
+    - Tell me about your [garage parts'](product) [price](price)?
+    - Tell me about [paint's](product) [price](price)
+    - Tell me about your [paint's](product) [price](price)?
+    
+- intent: navigate
+  examples: |
+    - What's on your [website](company_name)?
+    - Can you [recommend](recommender) some [products](product) for me?
+    - Should I buy a [paracetamol](product) 250 mg or paracetamol 500 mg?
+    - What's on your website?
+    - Show me around
+    - What do you got here?
+
+- intent: inform 
+  examples: |
+    - I am [Nabanita Dash](name)
+    - My name is [Nabanita Dash](name)
+    - My email address is [dashnabanita@gmail.com](email)
+    - Email me to [dashnabanita@gmail.com](email)
+    - Send an email to [b117030@iiit-bh.ac.in](email)
+    - [dashnabanita@gmail.com](email)
+    - Create a [sales ticket](sales_ticket) for me
+    - Will you please create a [sales ticket](sales_ticket) on my behalf?

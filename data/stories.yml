@@ -1,0 +1,112 @@
+version: "2.0"
+
+stories:
+
+- story: happy path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: happy path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_inform
+  - intent: inform
+  - intent: navigate
+  - action: utter_navigate 
+  - intent: mood_unhappy
+  - action: utter_navigate
+  - intent: mood_great
+  - action: utter_happy
+
+- story: happy path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_inform
+  - intent: inform
+  - intent: enquire
+  - action: utter_enquire 
+  - intent: mood_unhappy
+  - action: utter_enquire
+  - intent: navigate
+  - action: utter_navigate
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_enquire
+  - intent: navigate
+  - action: utter_navigate
+  - action: utter_did_that_help
+  - intent: affirm
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: sad path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_inform
+  - intent: inform
+  - intent: navigate
+  - action: utter_navigate 
+  - intent: mood_unhappy
+  - action: utter_navigate
+  - intent: mood_unhappy
+  - action: utter_navigate
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: sad path 4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_inform
+  - intent: inform
+  - intent: enquire
+  - action: utter_enquire 
+  - intent: mood_unhappy
+  - action: utter_enquire
+  - intent: navigate
+  - action: utter_navigate
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_enquire
+  - intent: navigate
+  - action: utter_navigate
+  - action: utter_did_that_help
+  - intent: deny
+  - intent: navigate
+  - action: utter_did_that_help
+  - intent: mood_unhappy
+  - action: utter_enquire
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_cheer_up
+  - intent: mood_unhappy
+  - action: utter_goodbye
